@@ -2,4 +2,4 @@
 Ultilizado raiz do projeto PokemonGame(Terminal)
 
 
-## Em desenvolvimento. 
+## Encerrado em 26/11/2022.
