@@ -4,44 +4,41 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        String escolha;
+        int escolha;
         boolean continuar = true;
         Player p = new Player();
 
         System.out.println(" ///////// BEM VINDO! /////////"
+                +"\nEu sou a Pokedex."
                 + "\n Vamos iniciar nossa aventura Pokemon.");
 
-        while (continuar) {
-            System.out.println("Digite SIM para se registrar"
-                    + "\nou digite MENU");
-            escolha = scan.next();
 
-            if (escolha.equals("sim") || escolha.equals("SIM")) {
+        p.registrarPlayer();
 
-                p.registrarPlayer();
+        boolean c = true;
+        while (c) {
+        System.out.print(p.nome + " este é o menu da sua Pokedex: "
+                + "\n1 - CATCH"
+                + "\n2 - MEUS DADOS");
 
-                System.out.println("Deseja encerrar? digite 0");
-                int laco = scan.nextInt();
-                if (laco == 0) continuar = false;
-                else continuar = true;
-
+        escolha = scan.nextInt();
+            switch (escolha){
+                case 1:
+                    p.catchPokemon();
+                break;
+                case 2:
+                    p.dethesPlayer();
+                break;
+                default:
+                    System.out.print("Digite uma alternativa valida \n \n \n");
+                    escolha = 0;
             }
-            if (escolha.equals("menu") || escolha.equals("MENU")) {
-                int op;
-                System.out.println("MENU:: "
-                        + "\n1 - CATCH");
-                op = scan.nextInt();
-
-                if (op == 1) p.catchPokemon();
-
-
-                System.out.println("Deseja encerrar? digite 0");
-                int laco = scan.nextInt();
-                if (laco == 0) continuar = false;
-                else continuar = true;
-
+            if (!(escolha == 0)){
+                c = false;
             }
         }
+
+
     }
 
 }

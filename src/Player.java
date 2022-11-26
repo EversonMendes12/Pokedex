@@ -19,14 +19,14 @@ public class Player {
         idade = scan.nextInt();
 
         System.out.println("\nEscolha uma liga pokemon:"
-                + "1 - Kanto"
-                + "2 - Hoenn");
+                + "\n1 - Kanto"
+                + "\n2 - Hoenn");
         liga = scan.nextInt();
 
         System.out.println("Escolha um pokemon: "
-                + "1 - Charmander"
-                + "2 - Squirtle"
-                + "3 - Bulbasaur");
+                + "\n1 - Charmander"
+                + "\n2 - Squirtle"
+                + "\n3 - Bulbasaur");
 
         int escolha = scan.nextInt();
         if (escolha == 1){
@@ -45,10 +45,17 @@ public class Player {
                 System.out.println("["+pokemon[i]+"]");
             }
         }
-
-
     }
 
+    public void dethesPlayer(){
+
+        System.out.println("-----------------------------");
+        System.out.println("Nome: " + nome);
+        System.out.println("Idade: " + idade);
+        System.out.println("Categoria: " + categoria);
+        System.out.println("Liga: " + liga);
+        System.out.println("-----------------------------");
+    }
 
 
 }
